@@ -1,0 +1,134 @@
+/* Experience & Education */
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 5.5fr 4.5fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.timeline-section h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.timeline {
+    border-left: 4px solid var(--primary);
+    padding-left: 2rem;
+    position: relative;
+    background: var(--glass);
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.timeline:hover {
+    box-shadow: var(--shadow-border);
+    border-left-color: var(--accent);
+}
+
+.timeline-item {
+    margin-bottom: 2.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    background: var(--bg2);
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px 0 rgba(99, 102, 241, 0.10);
+    padding: 1.2rem 1.2rem 1.2rem 2.2rem;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 24px 0 rgba(99, 102, 241, 0.18);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2.1rem;
+    top: 1.5rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid var(--bg2);
+    box-shadow: 0 0 0 3px var(--primary);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.timeline-item:hover .timeline-dot {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent);
+}
+
+.timeline-title {
+    font-weight: 700;
+    color: inherit;
+    font-size: 1.08rem;
+}
+
+.timeline-date {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    padding: 0.2rem 0.8rem;
+    margin-left: 0.7rem;
+    font-weight: 500;
+    vertical-align: middle;
+    transition: background 0.2s;
+}
+
+.timeline-item:hover .timeline-date {
+    background: var(--accent);
+}
+
+.timeline-desc .cert-images img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.timeline-item:hover .timeline-desc,
+.timeline-item:hover .timeline-list {
+    color: #fff;
+}
+
+.timeline-list {
+    color: var(--text);
+    font-size: 0.97rem;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.cert-dropdown summary:hover {
+    color: rgba(244, 63, 94, 0.8);
+}
+
+@media (max-width: 900px) {
+    .timeline-grid {
+        grid-template-columns: 1fr;
+        transform: scale(.95);
+    }
+}
+
+@media (max-width: 700px) {
+    .timeline {
+        padding-left: 1rem;
+    }
+
+    .timeline-item {
+        padding: 1rem 1rem 1rem 1.5rem;
+    }
+}
